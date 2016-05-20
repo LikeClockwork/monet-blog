@@ -48,12 +48,13 @@
 
 
   </div>
+  <footer class="blog-footer">
+        <p><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}, Proudly published with <a href="https://ghost.org">Ghost</a>.</p>
+        <p>
+          <a href="#">Back to top</a>
+        </p>
+      </footer>
 
-  <div class="mastfoot">
-    <div class="inner">
-      <p><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}, Proudly published with <a href="https://ghost.org">Ghost</a>.</p>
-    </div>
-  </div>
 
   {{!-- jQuery needs to come before `{{ghost_foot}}
   ` so that jQuery can be used in code injection --}} <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
