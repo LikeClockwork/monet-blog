@@ -1,5 +1,7 @@
 body {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 80px;
+}
 
 #nav-logo {
   height: 100px;
