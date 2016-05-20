@@ -1,7 +1,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
   padding-top: 90px;
-  padding-bottom: 60px;
 }
 
 #nav-logo {
@@ -243,9 +242,6 @@ div.colorsplotch {
 
   .blog-footer {
     padding: 40px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     color: #999;
     text-align: center;
     background-color: #f9f9f9;
