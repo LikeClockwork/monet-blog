@@ -42,19 +42,6 @@ img.header {
 .circle-up {
   border-radius: 50%; }
 
-.light-orange {
-  background-color: rgba(255, 150, 0, 0.5); }
-
-.med-orange {
-  background-color: rgba(255, 150, 0, 0.75); }
-
-.extralight-orange {
-  background-color: rgba(255, 150, 0, 0.1); }
-
-.inverse {
-  background-color: #333;
-  color: #fff5d5; }
-
 h1 {
   font-size: 60px; }
 
@@ -260,4 +247,18 @@ div.colorsplotch {
   }
   .blog-footer p:last-child {
     margin-bottom: 0;
-  }  
+  }
+
+
+  .light-orange {
+    background-color: rgba(255, 150, 0, 0.5); }
+
+  .med-orange {
+    background-color: rgba(255, 150, 0, 0.75); }
+
+  .extralight-orange {
+    background-color: rgba(255, 150, 0, 0.1); }
+
+  .inverse {
+    background-color: #333;
+    color: #fff5d5; }
