@@ -313,3 +313,21 @@ div.colorsplotch {
     background-color: #333;
     color: #fff5d5;
   }
+
+  .post-hf {
+    padding: 20px;
+    background-color: #555;
+    color: #fff5d5;
+  }
+
+  .post-hf a {
+    color: #FFB54C
+  }
+
+  .post-content {
+    padding: 20px;
+  }
+
+  .post-content img {
+    text-align: center;
+  }
