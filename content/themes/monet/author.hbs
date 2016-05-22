@@ -7,21 +7,22 @@
 {{#author}}
     <div class="row">
       <div class="col-md-2"></div>
-      <div class="col-md-8">
-        {{#if image}}
-          <figure class="author-image">
-            <div class="img" class="circle-up" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></div>
-          </figure>
-        {{/if}}
-        <h2 class="author-title">{{name}}</h1>
-        {{#if bio}}
-            <p class="author-bio">{{bio}}</p>
-        {{/if}}
-        <div class="author-meta">
-            {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
-            {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
-            <span class="author-stats"><i class="icon-stats"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
-        </div>
+      <div class="col-md-8 author inverse">
+        {{#if image}}<span class="image"><img class="author-thumb" src="{{image}}" alt="{{name}}" nopin="nopin" /></span>{{/if}}
+        <span class="auth">
+          <h1 class="author-title">{{name}}</h1>
+          <p>
+          {{#if location}}<span><i class="fa fa-map-pin" aria-hidden="true"></i> {{location}} </span>{{/if}}
+          {{#if website}}<span><i class="fa fa-globe" aria-hidden="true"></i> <a href="{{website}}">{{website}}</a></span>{{/if}}
+          <span class="author-stats"><i class="fa fa-pencil" aria-hidden="true"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
+          </p>
+          {{#if bio}}
+              <p class="author-bio">{{bio}}</p>
+          {{/if}}
+
+
+        </span>
+
       </div>
       <div class="col-md-2"></div>
 

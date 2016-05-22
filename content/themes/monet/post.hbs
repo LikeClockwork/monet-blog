@@ -15,17 +15,24 @@
         <h1 class="post-title">{{title}}</h1>
       </div>
       <div class="post-content">
-        <p>{{content}}</p>
+        {{content}}
       </div>
       <div class="post-hf">
-        <p>Posted by
-          {{#author}}<a href="{{url}}">{{name}}</a>{{/author}} on {{date format="DD MMMM YYYY"}}</p>
+          <p class="post-meta">
+            {{#if author.image}}<span><img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" /></span>{{/if}}
+            <span class="auth">
+              Posted by {{author}} {{tags prefix=" on "}}
+            <br>
+            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+          </span>
+          </p>
         <p>Share this post
           <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-            <span class=""><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</span>
+            <span class=""><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter </span>
           </a>
+          or
           <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-            <span class=""><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</span>
+            <span class=""> <i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</span>
           </a>
         </p>
       </div>

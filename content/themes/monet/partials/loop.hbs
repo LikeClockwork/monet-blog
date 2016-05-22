@@ -14,9 +14,12 @@
             <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
             <p>{{excerpt words=50}} <a href="{{url}}">...</a> </p>
             <p class="post-meta">
-              {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
-              {{author}} {{tags prefix=" on "}}
+              {{#if author.image}}<span><img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" /></span>{{/if}}
+              <span class="auth">
+                Posted by {{author}} {{tags prefix=" on " limit= 3}}
+              <br>
               <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+            </span>
             </p>
           </div>
         </div>
@@ -24,19 +27,30 @@
 
       {{else}}
         <div class="col-md-6 bgify" style="background-image: url({{image}});">
-          {{#cond @index '==' 1}}<div class="bg-overlay" style="background-color: rgba(255, 194, 0, 0.6);"></div>{{/cond}}
-          {{#cond @index '==' 2}}<div class="bg-overlay" style="background-color: rgba(103, 159, 210, 0.6);"></div>{{/cond}}
-          {{#cond @index '==' 3}}<div class="bg-overlay" style="background-color: rgba(31, 26, 178, 0.6);"></div>{{/cond}}
-          {{#cond @index '==' 4}}<div class="bg-overlay" style="background-color: rgba(255, 221, 115, 0.6);"></div>{{/cond}}
+          {{#cond @index '==' 1}}
+            <div class="bg-overlay" style="background-color: rgba(255, 194, 0, 0.6);"></div>
+          {{/cond}}
+          {{#cond @index '==' 2}}
+            <div class="bg-overlay" style="background-color: rgba(103, 159, 210, 0.6);"></div>
+          {{/cond}}
+          {{#cond @index '==' 3}}
+            <div class="bg-overlay" style="background-color: rgba(31, 26, 178, 0.6);"></div>
+          {{/cond}}
+          {{#cond @index '==' 4}}
+            <div class="bg-overlay" style="background-color: rgba(255, 221, 115, 0.6);"></div>
+          {{/cond}}
           <div class="sub-content">
             <div class="inner-content {{#cond @index '==' 2}}invert{{/cond}}{{#cond @index '==' 3}}invert{{/cond}}">
 
               <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
               <p>{{excerpt words=50}} <a href="{{url}}">...</a></p>
               <p class="post-meta">
-                {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
-                {{author}} {{tags prefix=" on "}}
+                {{#if author.image}}<span><img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" /></span>{{/if}}
+                <span class="auth">
+                  Posted by {{author}} {{tags prefix=" on " limit= 1}}
+                <br>
                 <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+              </span>
               </p>
             </div>
           </div>

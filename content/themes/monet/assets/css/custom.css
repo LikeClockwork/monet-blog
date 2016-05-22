@@ -2,7 +2,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   padding-top: 80px;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 30px;
 }
 
 #nav-logo {
@@ -309,14 +309,18 @@ div.colorsplotch {
   .extralight-orange {
     background-color: rgba(255, 150, 0, 0.1); }
 
-  .inverse {
+  .inverse, .inverse h1, .inverse h2, .inverse h3,.inverse h4,.inverse h5,.inverse h6 {
     background-color: #333;
     color: #fff5d5;
   }
 
   .post-hf {
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
     background-color: #555;
+    color: #fff5d5;
+  }
+
+  .post-hf h1 {
     color: #fff5d5;
   }
 
@@ -329,5 +333,57 @@ div.colorsplotch {
   }
 
   .post-content img {
-    text-align: center;
+    padding: 40px 0;
+    display: block;
+    margin: 0 auto;
   }
+
+  .post-content p {
+    margin-top: 20px;
+  }
+
+  .post-content h1,h2,h3,h4,h5,h6 {
+    color: #333;
+    margin-top: 30px;
+  }
+
+.post-meta .author-thumb {
+  height: 80px;
+  border-radius: 50%;
+}
+
+.post-meta span {
+  display: inline-block;
+}
+
+.post-meta .auth {
+  position: relative;
+  top: 15px;
+  padding-left: 10px;
+}
+
+.author span {
+  display: inline-block;
+}
+
+.author .image {
+  padding: 20px;
+}
+
+.author .author-thumb {
+  height: 210px;
+  border-style: solid;
+  border-radius: 50%;
+  border-color: rgba(255, 245, 213, 0.4);
+  border-width: 1px;
+}
+
+.author .auth {
+  position: relative;
+  top: 58px;
+  padding-left: 20px;
+}
+
+.author .auth span {
+  margin-right: 30px;
+}
